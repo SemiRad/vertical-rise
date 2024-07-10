@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;800&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+	color: white;
+}
+
+body{
+	 width: 100%;
+	 min-height: 100vh;
+	 background: black;
+}
+
+
+/*=====================================================================*/
+.navbar{
+	width: 100%;
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1.2vw 6vw;
+	background-color: black;
+	z-index: 1000;
+}
+.logo{
+	font-size: 3vw;
+	color: #fbaa09;
+	font-weight: 800;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+.logo img{
+	width: 25%;
+	-webkit-filter: drop-shadow(5px 5px 5px rgb(0, 0, 0.5));
+  	filter: drop-shadow(5px 5px 5px rgb(0, 0, 0.5));
+}
+.menuitems {
+	display: flex;
+	margin: auto 0;
+}
+.menuitems li{
+	list-style: none;
+	margin: 0 1.5vw;
+}
+.menuitems li a{
+	display: block;
+	color: white;
+	font-size: 15px;
+	letter-spacing: 4px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+.menuitems li:hover a{
+	color: gray;
+}
+
+
+
+/*=====================================================================*/
+.containerBuy{
+	display: flex;
+	width: 100%;
+	min-height:100vh;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	background-color: ghostwhite;
+}
+.textBuy{
+	width:50%;
+	padding-left: 5rem;
+	
+}
+
+.textBuy h2{
+	color: black;
+	font-size: 40px;
+	font-weight: 900;
+	line-height: 7.5vw;
+	text-transform: capitalize;
+	 
+}
+.textBuy h5{
+	color: black;
+	font-size: 35px;
+	font-weight: 900;
+	line-height: 7.5vw;
+	text-transform: capitalize;
+	 
+}
+.textBuy p{
+	color: black;
+	font-size: 35px;
+	font-weight: 300;
+	text-align: left;
+	margin-top: 20px;
+	margin-right: 10vw; 
+	text-transform: none;
+}
+.textBuy button{
+	padding: 10px 20px;
+	border-radius: 7px;
+	border:  none;
+	background-color: black;
+	color: whitesmoke;
+	font-size: 18px;
+	text-transform: capitalize;
+	cursor: pointer;
+	transition: .5s;
+}
+.textBuy button:hover{
+	transform: scale(1.3);
+}
+
+
+.imageAbout{
+	display: flex;
+	width: 50%;
+	height:100%;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+.imgbox{
+	position: relative;
+	min-width: 70vh;
+	margin-right: 10vw;
+}
+.imgbox img{
+	padding-top: 17%;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+/*=======================================================================*/
+.icons{
+	position: fixed;
+	top: 50%;
+	right: -15vw;
+	transform: translateY(-50%);
+	z-index:  1000;
+}
+
+.icons .fa{
+	width: 20vw;
+	padding:  1vw;
+	font-size: 2.5vw;
+	cursor: pointer;
+	background: black;
+	transition:  0.5s ease;
+}
+.icons .fa:hover{
+	color: #fbaa09;
+	transform: translateX(-15vw);
+}
+.icons .fa span{
+	position:  relative;
+	font-size: 1.8vw;
+	bottom:  0.3vw;
+	margin-left: 1.8vw;
+}
+
+input{
+	display: none;
+	visibility: hidden;
+	-webkit-appearance: none;
+			appearance: none;
+}
+.navbar label{
+	display: none;
+}
+
+
+/*------------------------------------------------------*/
+/*responsiveness*/
+
+@media screen and (max-width: 900px)	
+{
+
+	body{
+		overflow:  auto;
+	}
+	.logo{
+		font-size: 5vw;
+	}
+	.navbar label{
+		display: block;
+		color: black;
+		font-size: 4vw;
+		padding: 1vw 1.5vw;
+		background: white;
+		cursor: pointer;
+		z-index: 1000;
+	}
+	.menuitems{
+		position: fixed;
+		top: 0;
+		right: -40vw;
+		width:25vw;
+		height: 100%;
+		background: white;
+		padding-top: 15vw;
+		padding-left: 5vw;
+		display: flex;
+		flex-direction: column;
+		transition: 0.3s ease;
+	}
+	.menuitems li a{
+		color: black;
+		font-size: 3vw;
+		margin: 0.5vw 0;
+	}
+	#check:checked ~ section .navbar .menuitems{
+		right: 0;
+	}
+	.containerShirts{
+		flex-wrap: wrap;
+	}
+	.head{
+		width: 100%;
+		padding: 15vw 10vw;
+		z-index: 100;
+	}
+	.head img{
+		width: 100%;
+		height: auto;
+	}
+	.head h2{
+		font-size: 30px;
+	}
+	.head p{
+		font-size: 15px;
+	}
+	.icons{
+		position: fixed;
+		z-index: 100;
+	}
+	.icons .fa{
+		padding: 1.7vw;
+	}
+
+
+
+/*SCROLL BAR*/
+::-webkit-scrollbar{
+	width: 12px;
+}
+::-webkit-scrollbar-track{
+	background-color: white;
+}
+::-webkit-scrollbar-thumb{
+	background-color: black;
+	border-radius: 50px;
+}
+
+}
+
